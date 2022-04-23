@@ -1,0 +1,17 @@
+LDV 1;
+STA a; 
+LDV 2; 
+STA b;  
+LDV 10;
+STA d;
+LDV 1;
+STA c;
+LDA c;
+SUB d;
+JZ 16;
+LDA a;
+MUL b;
+STA a;
+INC c;
+JMP 8;
+END 0;

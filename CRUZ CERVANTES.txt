@@ -1,0 +1,19 @@
+     1er Examen parcial de Compiladores   22 de marzo 22
+
+Nombre Alumno(a): 
+
+1.- Defina compilador:
+2.- Defina qué es un alfabeto
+3.- ¿En qué etapa se realiza la verificación de tipos?
+4.- Defina qué es una palabra
+5.- ¿Cuál es la primera etapa de un compilador?
+6.- Explique que es la longitud relativa de una cadena
+7.- ¿En que etapa se quitan los comentarios?
+8.- ¿En qué etapa se incluyen archivos de cabecera?
+9.- Explique en qué consiste el análisis léxico
+10.- ¿En qué etapa se eliminan comentarios?
+11.- Convierte la siguiente expresión a posfija a-b*c/d+e
+12.- Convierte la siguiente expresión a posfija a+b-c-d*e
+13.- Convierte la siguiente expresión a posfija y evaluala con una pila2-9/13/11*3
+14.- Convierte la siguiente expresión a posfija y evaluala con una pila12/15*5+1-13
+15.- a partir de la expresión a posfija genera el código intermedio abc/d/e*+

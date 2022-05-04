@@ -185,37 +185,54 @@ def infija2Posfija(expresion_infija):
         salida.append(pila.pop())
     return salida
 
+#Marca error cuando falta un “;” 
+def puntoComa(archivo):
+    z=True
+    d=0
+    g=d
+    for ren in archivo:
+        datos = quitaComentarios(ren)#1
+        d+=1
+        if not(";" in datos):
+            z=False 
+            g=d
+    return z,g
+            
 #PRUEBAAAAAAAAA
 tablaVar = []
 archivo = open("ansu.txt", "r")
 c=0
-for ren in archivo:
-    datos = quitaComentarios(ren)#1
-    if (datos != "end;"):
-        datos1 = cambiaPR(datos)#3
-        tok = tokeniza(datos1)
-        if(tok[0] == "var"):#2
-            agregaVar(datos,c)
-            c+=1
-        elif (tok[0]=="print"):
-            print(ren[7:-4])
-        elif (tok[0]=="IN2"):#3
-            for n in tok:
-                if estaEnTabla(n):
-                    for v in tablaVar:
-                        if v.nombre == n:
-                            v.valor=input(f"{n} :")       
-        elif (datos[1]=="="):#4
-            if len(datos)==4:
-                setValor(datos[0],datos[2])
-            else:
-                d= ren.split("=") 
-                expresion=d[1][:-1]
-                posfija = infija2Posfija(expresion)
-                print(posfija)
-        
+coma=puntoComa(archivo)
+if (coma[0]==True):
+    archivo = open("ansu.txt", "r")
+    for ren in archivo:
+        datos = quitaComentarios(ren)#1
+        if (datos != "end;"):
+            datos1 = cambiaPR(datos)#3
+            tok = tokeniza(datos1)
+            if(tok[0] == "var"):#2
+                agregaVar(datos,c)
+                c+=1
+            elif (tok[0]=="print"):
+                print(ren[7:-4])
+            elif (tok[0]=="IN2"):#3
+                for n in tok:
+                    if estaEnTabla(n):
+                        for v in tablaVar:
+                            if v.nombre == n:
+                                v.valor=input(f"{n} :")       
+            elif (tok[1]=="="):#4 Modificar esta parte <----
+                if len(tok)==4:
+                    setValor(tok[0],tok[2])#probar
+                else:
+                    d= ren.split("=") 
+                    expresion=d[1][:-2]
+                    posfija = infija2Posfija(expresion)
+                    print(posfija)    
+else:
+    print(f"Error falta ; en la linea {coma[1]}")
 archivo.close()
-muestraVar()
+# muestraVar()
 
 #para asignar valor con la direccion
         # elif(tok[0] == "print"):#3

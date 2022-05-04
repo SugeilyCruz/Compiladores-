@@ -1,0 +1,7 @@
+IN2 a;
+IN2 b;
+LDA a;
+MUL b;
+STA c;
+IN5 c;
+END 0;

@@ -4,7 +4,7 @@ param = []
 pc = 0
 ac = 0
 memDatos = {}
-archivo = open("sugeilyPUno.txt", "r")
+archivo = open("prueba.txt", "r")
 
 # En la primera parte del codigo se encarga de separar las instrucciones y los parametros con split(espacios).
 # Para despues colocar las instrucciones en la lista inst y los parametros en la lista param.
@@ -55,4 +55,11 @@ while (inst[pc]!="END"):
         valor = memDatos[param[pc]]        
         valor = valor + 1
         memDatos[param[pc]] = valor        
-        pc = pc + 1        
+        pc = pc + 1      
+#Interrupciones
+    elif (inst[pc]=="IN2"):#Lee
+        memDatos[param[pc]] = int(input("Da un valor: "))
+        pc = pc + 1  
+    elif (inst[pc]=="IN5"):#Imprime
+        print(memDatos[param[pc]])
+        pc = pc + 1 

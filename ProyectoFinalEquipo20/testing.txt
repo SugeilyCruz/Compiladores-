@@ -1,0 +1,16 @@
+LDV 12; 
+STA b; 
+LDV 5; 
+STA a; 
+LDV 1; 
+STA f; 
+LDA f; 
+SUB a; 
+JZ 15; 
+LDA a; 
+DIV a; 
+SUB b; 
+STA a; 
+INC f; 
+JMP 5; 
+END 0; 

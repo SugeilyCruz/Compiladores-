@@ -1,0 +1,11 @@
+IN4 a;
+IN4 b;
+IN3 c;
+IN3 d;
+LDA a;
+ADD b;
+ADD c;
+ADD d;
+STA e;
+IN8 e;
+END 0;

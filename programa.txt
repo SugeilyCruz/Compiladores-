@@ -15,3 +15,4 @@ STA a;
 INC c;
 JMP 8;
 END 0;
+SIN 5;

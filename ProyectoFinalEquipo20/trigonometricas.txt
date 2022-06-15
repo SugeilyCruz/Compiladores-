@@ -1,0 +1,15 @@
+SIN a;
+COS b;
+LDA a;
+ADD b;
+STA c;
+TAN d;
+MUL a;
+STA e;
+LDA c;
+SUB d;
+STA f;
+DIV b;
+STA g;
+IN6 g;
+END 0;

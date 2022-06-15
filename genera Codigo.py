@@ -92,10 +92,11 @@ def tokeniza(cad):
     return tokens
 
 
-prog = "a*b*c+d+e+f*g*a"
-tokens = tokeniza(prog)
-posfija = infija2Posfija(tokens)
+# prog = "a*b*c+d+e+f*g*a"
+# tokens = tokeniza(prog)
+# posfija = infija2Posfija(tokens)
 
+posfija= "ab*c-de*-f-"
 ct = 1
 pila1 = Pila()
 intermedio = []

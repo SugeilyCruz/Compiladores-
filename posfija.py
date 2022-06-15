@@ -8,7 +8,7 @@ for e in posfija:
         op2 = float(pila.pop())
         op1 = float(pila.pop())
         if (e == "*"):
-            r = op1 * op2
+            r = op1 * op2 #codigo intermedio
         elif (e == "+"):
             r = op1 + op2
         elif (e == "-"):

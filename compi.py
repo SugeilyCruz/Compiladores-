@@ -13,7 +13,7 @@ def esOperador(v):
     return (v in "*/+-")
 
 
-posfija=["a","b","*","c","d","*","+"]
+posfija=["a","b","*","c","-","d","e","*","-","f","-"]
 
 ct=1
 pila1=Pila()
